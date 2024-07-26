@@ -22,7 +22,7 @@ function App() {
    }
 
       setPassword(pass)
-      console.log(pass)
+     //  console.log(pass)
   },
      [length , numberAllowed , charAllowed , setPassword ])
 
