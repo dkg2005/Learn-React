@@ -29,9 +29,9 @@ function App() {
       className="w-full h-screen flex flex-wrap items-center justify-center items-center bg-cover bg-no-repeat"
       style={{
         backgroundImage: `url('https://img.freepik.com/premium-vector/money-currency-exchange-money-transfer-stock-exchange-currencies-dollar-euro-pound-yen_228260-472.jpg')`,
-        backgroundSize: 'cover',
-        backgroundAttachment: 'fixed', 
-    }}
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+      }}
     >
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
