@@ -42,10 +42,17 @@ export class AuthService {
 
      async getCurrentUser(){
         try {
-            return await this.account.get();
+            const user = await this.account.get();
+            if (user) {
+              return user;
+            } else {
+              // If no user is logged in, return a guest user
+              return { guest: true };
+            }
         } catch (error) {
            // throw error;
            console.log("Appwrite serive :: getCurrentUser:: error: ->>", error);
+           // throw error
         }
 
         return null;
