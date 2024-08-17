@@ -92,9 +92,10 @@ export class Service{
                 conf.appwriteCollectionId,
                 queries,
              
+                
             )
         } catch (error) {
-            console.log("Appwrite serive :: getPosts :: error". error);
+            console.log("Appwrite serive :: getPosts :: error", error);
                 return false;
         }
     }
@@ -141,5 +142,5 @@ export class Service{
 }
  
 
-const serivce = new Service();
-export default Service
+const service = new Service();
+export default service

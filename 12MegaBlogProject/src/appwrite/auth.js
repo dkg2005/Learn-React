@@ -42,12 +42,16 @@ export class AuthService {
 
      async getCurrentUser(){
         try {
-            const user = await this.account.get();
-            if(!user){    
-                const guest = await this.account.createAnonymousSession();
-                return guest
+           const user = await this.account.get();
+
+            // If user is authenticated, return the user object
+            if (user) {
+                return user;
             }
-            return user;
+    
+            // If user is not authenticated, create an anonymous session
+            const guest = await this.account.createAnonymousSession();
+            return guest;
             }
          catch (error) {
            // throw error;
