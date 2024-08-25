@@ -9,8 +9,8 @@ export class Service{
 
     constructor(){
         this.client
-            .setEndpoint(conf.appwriteUrl)
-            .setProject(conf.appwriteProjectId);
+        .setEndpoint(conf.appwriteUrl)
+        .setProject(conf.appwriteProjectId);
         this.databases = new Databases(this.client);
         this.bucket = new Storage(this.client);
     }
@@ -19,14 +19,13 @@ export class Service{
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
-                conf.appwriteCollectionId,
                 slug,
                 {
                     title,
                     content,
                     featuredImage,
                     status,
-                    userId
+                    userId,
                 }
             )
         } 
