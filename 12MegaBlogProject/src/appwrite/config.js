@@ -1,3 +1,4 @@
+import { json } from "react-router-dom";
 import conf from "../conf/conf.js"
 
 import { Client, ID, Databases, Storage, Query } from "appwrite"
@@ -15,21 +16,29 @@ export class Service{
         this.bucket = new Storage(this.client);
     }
 
-    async createPost({title, slug, content, featuredImage, status, userId}){
+    async createPost({title,  content, featuredImage, status, userId}){
         try {
+            const data = {
+                title,
+                content,
+                featuredImage,
+                status,
+                userId,
+            };
+            
+            // Convert to JSON string if needed
+            const jsonData = JSON.stringify(data);
+      
+           // console.log("Data to be submitted:",jsonData);
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
-                slug,
-                {
-                    title,
-                    content,
-                    featuredImage,
-                    status,
-                    userId,
-                }
+                conf.appwriteCollectionId,
+                ID.unique(),
+                jsonData
             )
         } 
         catch (error) {
+         //   console.log({title, content, featuredImage, status, userId,});  
             console.log("Appwrite serive :: createPost :: error", error);
         }
     }
