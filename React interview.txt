@@ -1,0 +1,9 @@
+React
+
+-> Virtual DOM
+-> life cycle of react component 
+
+Virtual DOM :
+-------------
+
+>virtual DOM div algorithm
