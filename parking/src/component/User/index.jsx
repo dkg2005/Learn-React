@@ -9,13 +9,18 @@ export const User = ({setUsers}) =>{
 
     const addUser = (e) =>{
         e.preventDefault()
-        setUsers(users => {
-            return [...users, {name,contact,role}]
-        })
+        setUsers(prevUsers => {
+            return [...prevUsers, {name,contact,role}]
+        })     
+        // This is added for the make empty after submitting the details
+        setName("")
+        setContact("")
+        setRole("student")
+        alert("User Registered")
     }
 
     return <form className="user"  action="" onSubmit={addUser}>
-        <h1>User Registration</h1>
+        <h1 className="userheading">User Registration</h1>
         <input 
         type="text" placeholder="Name" 
         value={name} onChange={e => setName(e.target.value)} required
