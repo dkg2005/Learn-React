@@ -7,3 +7,13 @@ Virtual DOM :
 -------------
 
 >virtual DOM div algorithm
+
+->real dom have collection of html tags while virtual dom have collection of react components
+ -> virtual dom is the blueprint or copy of real dom and when we made some changes to virtual dom then it matches that particular components with previous state of that components if the state is changes then we re-render it that particular component from the real dom 
+
+
+THREE TYPES OF STORAGE
+----------------------
+local storage  =  10 MB
+session storage =  5 MB
+cookies storage  = 5 KB

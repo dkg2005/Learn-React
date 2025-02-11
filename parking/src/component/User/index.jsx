@@ -10,6 +10,7 @@ export const User = ({setUsers}) =>{
     const addUser = (e) =>{
         e.preventDefault()
         setUsers(prevUsers => {
+            localStorage.setItem("USERS",JSON.stringify([...prevUsers, {name,contact,role}]))
             return [...prevUsers, {name,contact,role}]
         })     
         // This is added for the make empty after submitting the details
