@@ -20,7 +20,10 @@ const App = () => {
         setVehicleInfo={setVehicleInfo}
         vehicleInfo={vehicleInfo}
       />
-      <VechicleList vehicleInfo={vehicleInfo} users={users}/>
+      <VechicleList
+       vehicleInfo={vehicleInfo} 
+       users={users}
+       />
     </>
   );
 };

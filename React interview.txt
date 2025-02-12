@@ -17,3 +17,16 @@ THREE TYPES OF STORAGE
 local storage  =  10 MB
 session storage =  5 MB
 cookies storage  = 5 KB
+
+
+
+REACT LIFE CYCLE EVENTS
+------------------------
+
+1. Mount 
+2 .Update
+3. Unmount
+
+
+-> Web-Pack = To Bundle the files, optimization Technique
+
