@@ -1,3 +1,5 @@
+import { Vechicle } from "../Vechicle";
+import styles from "./index.css"
 export const VechicleList = ({ vehicleInfo, users }) => {
   // console.log(users.map(user,idx)=>(
   //   user.role
@@ -10,16 +12,24 @@ export const VechicleList = ({ vehicleInfo, users }) => {
       }
     }
   }
+  const getContact = (owner) =>{
+    for(let i=0; i<=users.length; i++){
+      if(users[i].name === owner){
+        return users[i].contact
+      }
+    }
+  }
   return (
     <>
-      <h2>Registerd Vechicles</h2>
-      <table border={10}>
+      <h2 className="heading">Registerd Vechicles</h2>
+      <table className="tableDetails">
         <thead>
           <tr>
             <th>Name</th>
             <th>Vechicle Number</th>
             <th>Type</th>
             <th>Role</th>
+            <th>Contact No.</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +39,7 @@ export const VechicleList = ({ vehicleInfo, users }) => {
               <td>{vehicle.vehicleNo}</td>
               <td>{vehicle.vehicleType}</td>
               <td>{getRole(vehicle.owner)}</td>
+              <td>{getContact(vehicle.owner)}</td>
             </tr>
           ))}
         </tbody>

@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import styles from "./index.css"
 
 export const User = ({setUsers}) =>{
     
@@ -21,20 +21,21 @@ export const User = ({setUsers}) =>{
     }
 
     return <form className="user"  action="" onSubmit={addUser}>
-        <h1 className="userheading">User Registration</h1>
-        <input 
+        <h1 className="heading">User Registration</h1>
+        <input  className="name"
         type="text" placeholder="Name" 
         value={name} onChange={e => setName(e.target.value)} required
-        />
-        <input
+        /> <br />
+        <input className="contact"
          type="text" placeholder="Contact" value={contact} 
          onChange={e => setContact(e.target.value)} required pattern="[0-9]{10}"
-         />
-        <select name="" id="" onChange={e => setRole(e.target.value)}>
-        <option value="student">Student</option>
-        <option value="faculty">Faculty</option>
-        <option value=""></option>
-        </select>
-        <input type="submit" value="Submit"/>
+         /> <br />
+        <select className="selectBtn"
+            name="" id="" onChange={e => setRole(e.target.value)}>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+            <option value=""></option>
+        </select> <br />
+        <input className="submitBtn" type="submit" value="Submit"/>
     </form>
 }

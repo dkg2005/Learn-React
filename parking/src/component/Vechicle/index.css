@@ -1,6 +1,12 @@
-body{
-    background-color: aquamarine;
+.heading{
+    color: #051709d6;
+    /* border: solid burlywood 2px; */
+    font-family:Optima, sans-serif;
+    font-style: normal;
+    font-variant: small-caps;
+    font-stretch: expanded;
+    font-weight: 700;
 }
-form{
-    color: blue;
-}
+/* .form{
+    border: 2px solid blueviolet;
+} */

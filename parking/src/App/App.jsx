@@ -2,6 +2,7 @@ import { useState } from "react";
 import { User } from "../component/User";
 import { Vechicle } from "../component/Vechicle";
 import { VechicleList } from "../component/VehicleList";
+import styles from './index.css'
 
 const App = () => {
   // const[users, setUsers] = useState([])

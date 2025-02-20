@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles  from './index.css'
 const type = {
   Cycle: {
     Daily: 5,
@@ -27,6 +28,8 @@ const calculateExpiryDate = (duration) => {
   }
   return today.toISOString().split("T")[0];
 };
+
+console.log(styles)
 
 export const Vechicle = ({ users, setVehicleInfo,vehicleInfo }) => {
   // * users is passing as object because this is an array
@@ -74,9 +77,9 @@ export const Vechicle = ({ users, setVehicleInfo,vehicleInfo }) => {
 
   return ( <>
   
-  <form action="" onSubmit={addVehicle}>
+  <form className="form" action="" onSubmit={addVehicle}>
       {" "}
-      <h1>Vehicle Registration</h1>
+      <h1 className="heading">Vehicle Registration</h1>
       <input
         type="text"
         placeholder="Enter Vehicle Number"

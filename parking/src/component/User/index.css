@@ -1,0 +1,51 @@
+.heading{
+    color: #051709d6;
+    border: solid rgb(8, 7, 68) 2px;
+    margin: 10px;
+    padding: 10px;
+    font-family:Optima, sans-serif;
+    font-style: normal;
+    font-variant: small-caps;
+    font-stretch: expanded;
+    font-weight: 700;
+}
+.user{
+    border: 2px solid rgb(141, 30, 30);
+}
+.name{
+    /* background-color: rgb(65, 154, 196); */
+    /* color: rgb(22, 21, 70); */
+    border: 1px solid rgb(12, 90, 93);
+    border-radius: 7px;
+    margin: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+.contact{
+    border: 1px solid rgb(12, 90, 93);
+    border-radius: 7px;
+    margin: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+.selectBtn{
+    border: 1px solid rgb(12, 90, 93);
+    border-radius: 7px;
+    margin: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+.submitBtn{
+    border: 1px solid rgb(12, 90, 93);
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(182, 192, 192);
+    background-color: black;
+    font-weight: bolder;
+}
