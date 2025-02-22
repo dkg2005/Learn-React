@@ -7,6 +7,30 @@
     font-stretch: expanded;
     font-weight: 700;
 }
-/* .form{
-    border: 2px solid blueviolet;
-} */
+.vehicleNo,.vehicleType,.vehicleOwner,.btn{
+    border: 1px solid rgb(12, 90, 93);
+    border-radius: 7px;
+    margin: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+.registerBtn{
+    border: 1px solid rgb(12, 90, 93);
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(182, 192, 192);
+    background-color: rgb(122, 12, 12);
+    font-weight: bolder;
+}
+.registerBtn:disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: gray;
+}
+.formVehicle{
+    text-align: center;
+}

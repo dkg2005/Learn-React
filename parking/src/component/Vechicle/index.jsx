@@ -77,25 +77,27 @@ export const Vechicle = ({ users, setVehicleInfo,vehicleInfo }) => {
 
   return ( <>
   
-  <form className="form" action="" onSubmit={addVehicle}>
+  <form className="formVehicle" action="" onSubmit={addVehicle}>
       {" "}
       <h1 className="heading">Vehicle Registration</h1>
-      <input
+      <input className="vehicleNo"
         type="text"
         placeholder="Enter Vehicle Number"
         required
         pattern="[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}"
         onChange={(e) => setVehicleNo(e.target.value)}
-      />
-      <select name="" id="" onChange={(e) => setVehicleType(e.target.value)}>
+      /> <br />
+      <select className="vehicleType"
+        name="" id="" onChange={(e) => setVehicleType(e.target.value)}>
         <option value="" disabled select selected>
           -- Selction Type --
         </option>
         <option value="Cycle">Cycle</option>
         <option value="Bike">Bike</option>
         <option value="Car">Car</option>
-      </select>
-      <select name="" id="" onChange={(e) => setOwner(e.target.value)} required>
+      </select> <br />
+      <select className="vehicleOwner"
+        name="" id="" onChange={(e) => setOwner(e.target.value)} required>
         <option value="" disabled selected>
           -- Select Owner --
         </option>
@@ -104,25 +106,25 @@ export const Vechicle = ({ users, setVehicleInfo,vehicleInfo }) => {
             {index + 1}.{user.name}
           </option>
         ))}
-      </select>
+      </select> <br />
       {vehicleType ? (
         <>
-          <hr />
-          <button
+          {/* <br /> */}
+          <button className="btn"
             type="button"
             value="daily"
             onClick={(e) => setDuration("Daily")}
           >
             Daily : {type[vehicleType].Daily}
           </button>
-          <button
+          <button className="btn"
             type="button"
             value="month"
             onClick={(e) => setDuration("Month")}
           >
             Month : {type[vehicleType].Month}
           </button>
-          <button
+          <button className="btn"
             type="button"
             value="annual"
             onClick={(e) => setDuration("Annual")}
@@ -131,8 +133,8 @@ export const Vechicle = ({ users, setVehicleInfo,vehicleInfo }) => {
           </button>
         </>
       ) : null}
-      <hr />
-      <input
+      <br />
+      <input className="registerBtn"
         type="submit"
         value="Register"
         onClick={console.log(pass)}

@@ -20,7 +20,7 @@ export const User = ({setUsers}) =>{
         alert("User Registered")
     }
 
-    return <form className="user"  action="" onSubmit={addUser}>
+    return <form className="formUser"  action="" onSubmit={addUser}>
         <h1 className="heading">User Registration</h1>
         <input  className="name"
         type="text" placeholder="Name" 
@@ -32,10 +32,12 @@ export const User = ({setUsers}) =>{
          /> <br />
         <select className="selectBtn"
             name="" id="" onChange={e => setRole(e.target.value)}>
+            <option value="none" disabled selected>-- Select Role --</option>
             <option value="student">Student</option>
             <option value="faculty">Faculty</option>
-            <option value=""></option>
         </select> <br />
-        <input className="submitBtn" type="submit" value="Submit"/>
+        <input className="submitBtn" 
+            type="submit" value="Submit" disabled={!name || !contact || !role}
+        />
     </form>
 }
