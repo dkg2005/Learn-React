@@ -34,3 +34,30 @@
 .formVehicle{
     text-align: center;
 }
+.passCard{
+    width: 300px;
+    margin: 20px auto; /* Centers the card */
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, #02475e, #038c8c);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.passCard h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.passCard p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.passCard strong {
+    color: #ffcc00; /* Highlight labels */
+}

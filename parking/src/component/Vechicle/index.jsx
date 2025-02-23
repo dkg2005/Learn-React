@@ -142,7 +142,7 @@ export const Vechicle = ({ users, setVehicleInfo,vehicleInfo }) => {
       />
     </form>
     {pass && (
-        <div>
+        <div className="passCard">
           <h2>Pass Details</h2>
           <p><strong>Vehicle Number:</strong> {pass.vehicleNo}</p>
           <p><strong>Owner:</strong> {pass.owner}</p>
