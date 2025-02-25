@@ -61,3 +61,17 @@
 .passCard strong {
     color: #ffcc00; /* Highlight labels */
 }
+.qrcodeBtn,.downloadBtn{
+    display: block;
+    margin: 20px auto; /* Centers horizontally */
+    padding: 10px 20px;
+    background-color: #0f065d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+a{ 
+    text-decoration: none;
+}

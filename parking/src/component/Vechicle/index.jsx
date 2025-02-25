@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles  from './index.css'
+import PassGenerator from "./passGenerator";
 const type = {
   Cycle: {
     Daily: 5,
@@ -141,18 +142,8 @@ export const Vechicle = ({ users, setVehicleInfo,vehicleInfo }) => {
         disabled={!duration || !vehicleNo || !owner}
       />
     </form>
-    {pass && (
-        <div className="passCard">
-          <h2>Pass Details</h2>
-          <p><strong>Vehicle Number:</strong> {pass.vehicleNo}</p>
-          <p><strong>Owner:</strong> {pass.owner}</p>
-          <p><strong>Type:</strong> {pass.vehicleType}</p>
-          <p><strong>Duration:</strong> {pass.duration}</p>
-          <p><strong>Price:</strong> ₹{pass.price}</p>
-          <p><strong>Issue Date:</strong> {pass.issueDate}</p>
-          <p><strong>Expiry Date:</strong> {pass.expiryDate}</p>
-        </div>
-      )}
+    { pass && <PassGenerator pass={pass}/>
+      }
   </>
   );
 };
