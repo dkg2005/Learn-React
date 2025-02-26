@@ -23,8 +23,6 @@ const PassGenerator = ({ pass }) => {
     const pdfBlob = pdf.output("blob");
     const pdfUrl = URL.createObjectURL(pdfBlob);
     setPdfUrl(pdfUrl);
-
-    console.log("PDF generated:", pdfUrl);
   };
 
   return (

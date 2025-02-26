@@ -24,7 +24,7 @@ REACT LIFE CYCLE EVENTS
 ------------------------
 
 1. Mount 
-2 .Update
+2. Update
 3. Unmount
 
 
