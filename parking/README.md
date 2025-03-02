@@ -25,7 +25,7 @@ A smart parking pass management system built with **React.js** that allows user 
 - **PDF Generation** (for pass download)
 
 ## 📸 Screenshots
-![Parking Pass System Screenshot]("parking/Project-Photos/PARKING PROJECT 1.png")
+![Parking Pass System Screenshot](![parking/Project-Photos/PARKING PROJECT 1.png](https://github.com/dkg2005/Learn-React/blob/main/parking/Project-Photos/PARKING%20PROJECT%201.png))
 
 ## 🎯 Installation & Setup
 1. Clone the repository:
