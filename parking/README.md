@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Smart Parking Pass System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A smart parking pass management system built with **React.js** that allows user and vehicle registration, dynamic QR code generation, and PDF pass downloading. The system efficiently manages parking passes based on vehicle type and duration while ensuring data persistence using local storage.
 
-## Available Scripts
+## 🚀 Features
+- **User Registration**: Register users with Name, Contact No, and Role (Student/Faculty).
+- **Vehicle Registration**: Register vehicles by selecting an owner from registered users, specifying vehicle type (Cycle, Bike, Car), and vehicle number.
+- **Pass Generation**:
+  - Issue parking passes based on the selected vehicle and duration (Daily, Monthly, Annual).
+  - Automatically calculates fare based on vehicle type and pass duration.
+  - Generates QR code for digital verification.
+  - Allows users to download a PDF of the generated pass.
+- **Data Persistence**:
+  - Utilizes local storage to retain user and vehicle data across sessions.
+- **Responsive UI**:
+  - User-friendly interface with dynamic updates using `useEffect`.
+  - Clean and structured design with color-coded UI improvements.
 
-In the project directory, you can run:
+## 🛠 Technologies Used
+- **React.js** (Functional Components, Hooks)
+- **JavaScript (ES6+)**
+- **HTML & CSS** (Responsive UI)
+- **Local Storage** (Data persistence)
+- **QR Code Generation**
+- **PDF Generation** (for pass download)
 
-### `npm start`
+## 📸 Screenshots
+![Parking Pass System Screenshot]("parking/Project-Photos/PARKING PROJECT 1.png")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 Installation & Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/dkg2005/Learn-React/tree/main/parking
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd smart-parking-pass
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+5. Open `http://localhost:3000` in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📝 Usage Guide
+1. **Register a User**: Enter the user's name, contact number, and select their role.
+2. **Register a Vehicle**: Select an existing user, enter the vehicle number, and choose the vehicle type.
+3. **Generate a Parking Pass**: Select a registered vehicle, choose the pass duration, and confirm the fare.
+4. **QR Code & PDF Download**: The system generates a QR code and provides a PDF download option for the parking pass.
 
-### `npm test`
+## 🏗 Future Enhancements
+- Implement backend integration with a database (Firebase, MongoDB, etc.).
+- Add user authentication (login/signup) for enhanced security.
+- Enable real-time pass verification through QR code scanning.
+- Implement admin dashboard for better management.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📜 License
+This project is open-source and available under the **MIT License**.
 
-### `npm run build`
+## 🙌 Contributing
+Contributions are welcome! Feel free to fork the repository and submit a pull request with improvements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📬 Contact
+For any queries or suggestions, feel free to reach out:
+- **LinkedIn**: [Dhruv Kumar Gupta](https://www.linkedin.com/in/dhruv-gupta-7666d71/)
+- **Email**: dhruvgupta766671@gmail.com
