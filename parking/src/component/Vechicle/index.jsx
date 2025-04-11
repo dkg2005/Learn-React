@@ -128,7 +128,7 @@ export const Vechicle = ({ users, setVehicleInfo,vehicleInfo }) => {
           <button className="btn"
             type="button"
             value="annual"
-            onClick={(e) => setDuration("Annual")}
+            onClick={() => setDuration("Annual")}
           >
             Annual : {type[vehicleType].Annual}
           </button>

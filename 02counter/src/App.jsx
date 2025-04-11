@@ -30,6 +30,7 @@ function App() {
    }
    else{
     console.log(`Now you are trying to go below ${Counter}`);
+    return;
    }
   }
 
