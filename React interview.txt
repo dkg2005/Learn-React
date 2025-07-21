@@ -30,3 +30,43 @@ REACT LIFE CYCLE EVENTS
 
 -> Web-Pack = To Bundle the files, optimization Technique
 
+
+
+
+
+
+
+## SPA (Single page application)-:
+--------------------------------------
+
+
+A Single Page Application (SPA) in the context of React.js (or web development in general) is a type of web application that loads a single HTML page and dynamically updates the content on that page as the user interacts with the app, without requiring a full page reload from the server.
+
+Key points about SPA in React.js:
+Single HTML page: The app initially loads one main HTML file (usually index.html).
+
+Dynamic content updates: When you navigate through the app or perform actions, React updates the parts of the page that need to change, instead of loading a whole new page.
+
+Client-side routing: Instead of the server serving new pages, the navigation is handled by React using libraries like react-router. This changes the URL and renders different components without refreshing the page.
+
+Fast user experience: Since only part of the page updates, SPAs often feel faster and more responsive compared to traditional multi-page apps.
+
+API-driven: Data fetching is done via APIs (usually REST or GraphQL) in the background to update the UI without full reloads.
+
+Example:
+When you click a link in a traditional website, the browser requests a new HTML page from the server.
+
+In a React SPA, clicking a link updates the URL using client-side routing and React renders the appropriate component, without a full page reload.
+
+
+## component based architecture
+## declarative syntax
+## virtual DOM
+## rich ecosystem
+## open source || community support
+
+
+
+
+
+
