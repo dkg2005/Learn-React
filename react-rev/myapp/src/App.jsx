@@ -13,6 +13,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ThemeToggleButton from './Components/ThemeToogleButton';
 import { ThemeContext } from './ThemeContext';
 import { ThemeProvider } from './ThemeContext';
+import useLocalStorage from './hooks/useLocalStorage';
+import User from './Pages/User';
 
 
 function App() {
@@ -71,30 +73,64 @@ function App() {
   //     });
   //     }, [] ) // only run once when component mounts
 
+   const [tasks, setTasks] = useLocalStorage("tasks", []);
+  const [input, setInput] = useState("");
+
+  const addTask = () => {
+    if (input.trim() !== "") {
+      setTasks([...tasks, input.trim()]);
+      setInput("");
+    }
+  };
+
+  const deleteTask = (index) => {
+    const updated = tasks.filter((_, i) => i !== index);
+    setTasks(updated);
+  };
+
   return (
-    <>
-     <ThemeProvider>
-      <div style={{ textAlign: 'center' }}>
-        <Navbar />
-        <h1>Welcome to the Theme Toggle App</h1>
-        <ThemeToggleButton />
-      </div>
-    </ThemeProvider>
-
-
-
-      {/* <BrowserRouter>
-      <Navbar />
+    <BrowserRouter>
       
-        <Routes>
-         <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/user/:username" element={<User />} />
+        <Route path="*" element={<h2>404 Not Found</h2>} />
       </Routes>
-      
-      </BrowserRouter> */}
-    </>
+    </BrowserRouter>
+    // <ThemeProvider>
+    //   <BrowserRouter>
+    //     <div style={{ minHeight: '100vh' }}>
+    //       <Navbar />
+    //       <main style={{ padding: '20px' }}>
+    //         <Routes>
+    //           <Route path="/" element={<Home />} />
+    //           <Route path="/about" element={<About />} />
+    //           <Route path="/contact" element={<Contact />} />
+    //           <Route path="*" element={<NotFound />} />
+    //         </Routes>
+    //       </main>
+    //     </div>
+    //   </BrowserRouter>
+
+    //   <div style={{ padding: '20px' }}>
+    //   <h2>📝 ToDo (Saved in localStorage)</h2>
+
+    //   <input
+    //     value={input}
+    //     onChange={(e) => setInput(e.target.value)}
+    //     placeholder="Add task"
+    //   />
+    //   <button onClick={addTask}>➕</button>
+
+    //   <ul>
+    //     {tasks.map((task, i) => (
+    //       <li key={i}>
+    //         {task} <button onClick={() => deleteTask(i)}>❌</button>
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </div>
+    // </ThemeProvider>
   )
 }
 
