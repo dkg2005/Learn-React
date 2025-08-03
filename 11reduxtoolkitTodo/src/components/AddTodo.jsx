@@ -9,6 +9,7 @@ function AddTodo() {
     const dispatch = useDispatch()
 
     const addTodoHandler = (e) =>{
+        if(input.trim() === '') return;
         e.preventDefault()
         dispatch(addTodo(input))
         setInput('')
